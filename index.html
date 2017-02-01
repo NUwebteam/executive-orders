@@ -3,11 +3,44 @@
     <head>
       <title>Title</title>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+      <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
       <link href="./index.min.css" rel="stylesheet">
     </head>
     <body>
       <div class="main-container">
+        <header>
+          <nav class="nav-container">
+            <a href="http://www.northeastern.edu">
+              <div class="nav-logo-container">
+                <img class="nav-logo-image"src="./assets/images/neu-logo.png" alt="Northeastern logo">
+              </div>
+            </a>
+          </nav>
+        </header>
+        <section class="hero-container">
+          <div class="hero-wrapper">
+            <div class="hero-content">
+              <h1> Northeastern's Campus Impact from Executive Orders </h1>
+            </div>
+          </div>
+        </section>
+        <section class="main-content-container">
+          <div id="content-template" class="content-wrapper">
+            <div class="content-issue-container">
+            </div>
+          </div>
+        </section>
       </div>
-      <script src="./bundle.js" type="text/javascript"></script>
+      <footer>
+        <div class="footer-col-left">
+          <h6> Northeastern University </h6>
+        </div>
+        <div class="footer-col-right">
+          <h6>360 Huntington Ave., Boston, Massachusetts 02115 -- 617.373.2000</h6>
+        </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+      <script src="./assets/scripts/index.js" type="text/javascript"></script>
     </body>
 </html>

@@ -5,7 +5,7 @@ let path    = require('path');
 
 module.exports = {
     entry: {
-        bundle: __dirname + "/index.js"
+        bundle: __dirname + "/assets/scripts/index.js"
     },
     output: {
         path: path.join(__dirname, "./"),
