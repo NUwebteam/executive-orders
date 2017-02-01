@@ -1,0 +1,48 @@
+{
+  "name": "neu-marcom.browser-template",
+  "version": "1.0.0",
+  "description": "A web tool built template for Northeastern University News",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "~6.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NUwebteam/browser-template.git"
+  },
+  "author": "Brian Berzellini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NUwebteam/browser-template/issues"
+  },
+  "homepage": "https://github.com/NUwebteam/browser-template#readme",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "run-sequence": "^1.2.2",
+    "webpack": "^1.13.2"
+  }
+}

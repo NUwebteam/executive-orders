@@ -1,0 +1,49 @@
+*bundle.js
+*.woff2
+*.woff
+*.svg
+*.ttf
+*.eot
+*.png
+*.jpeg
+*.jpg
+
+# Created by https://www.gitignore.io/api/node,osx,linux,windows,ruby,node,rails,express,ember
+
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+
+### OSX ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Dependency directories
+node_modules
+
+*.bowerrc
+bower.json
+
+# dependencies
+/node_modules
+/bower_components
