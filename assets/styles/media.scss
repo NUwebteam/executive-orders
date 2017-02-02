@@ -55,8 +55,18 @@
     padding-top: 0px;
   }
   .content-issue-container {
-    margin: 10px 0px 75px 0px;
+    margin: 0px 0px 75px 0px;
+    border-top: 1px solid #000;
+    padding-top: 20px;
   }
+  .content-issue-container h2 {
+    text-decoration: none;
+  }
+  // .content-issue-container {
+  //   margin: 0px 0 75px;
+  //   border-top: 1px solid #000;
+  //   padding-top: 20px;
+  // }
   .issue-content h3 {
     padding: 15px 0;
   }
@@ -84,6 +94,9 @@
   .hero-content h1 {
     font-size: 3.25em;
   }
+  .content-issue-container h2 {
+    text-decoration: none;
+  }
   .content-issue-container {
     margin: 0px 0 75px;
     border-top: 1px solid #000;
@@ -109,7 +122,7 @@
   //   border-top: 1px solid #000;
   //   padding-top: 20px;
   // }
-  .content-issue-container h2 {
-    text-decoration: none;
-  }
+  // .content-issue-container h2 {
+  //   text-decoration: none;
+  // }
 }
