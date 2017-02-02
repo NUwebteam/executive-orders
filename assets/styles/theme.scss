@@ -37,14 +37,14 @@
 
 .hero-content {
   width: 100%;
-  padding: 250px 0px;
+  padding: 200px 0px;
   text-align: center;
   color: $white;
   background-color: rgba(0,0,0,.55);
 }
 
 .hero-content h1 {
-  font-size: 4em;
+  font-size: 3.25em;
   width: 60%;
   line-height: 1.25em;
   margin: 0px auto;
@@ -54,17 +54,19 @@
 
 .main-content-container {
   width: 100%;
-  max-width: 1305px;
-  margin: 0px auto;
+  position: relative;
 }
 
 .content-wrapper {
   width: 100%;
   height: auto;
+  max-width: 1305px;
+  margin: 0px auto;
+  padding-top: 150px;
 }
 
 .content-issue-container {
-  margin: 125px 0px;
+  margin: 0px 0px 125px 0px;
   width: 100%;
   height: auto;
 }
@@ -110,6 +112,54 @@
   }
 }
 
+.page-nav-container {
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  // min-height: 50px;
+  background-color: $black;
+  color: $white;
+}
+
+.page-nav-list {
+  width: 100%;
+}
+
+.page-nav-list > a{
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  width: 19.5%;
+  padding: 20px 0px 30px;
+  text-decoration: none;
+}
+
+.page-nav-list > a:not(:last-child){
+  border-right: 1px solid $white;
+}
+
+.page-nav-list > a li.nav-item:before{
+  display: block;
+  border-top: 2px solid $red;
+  padding-top: 10px;
+  content: '';
+  transform: scaleX(0.0001);
+  transition: transform .25s ease-in-out;
+}
+
+.page-nav-list > a li.nav-item:hover:before {
+  transform: scaleX(1);
+  transition: transform .25s ease-in-out;
+}
+
+.nav-item {
+  text-transform: uppercase;
+  color: $white;
+  text-decoration: none;
+}
+
 footer {
   width: 100%;
   height: auto;
@@ -132,4 +182,14 @@ footer {
   display: inline-block;
   padding: 50px 0px;
   text-align: center;
+}
+//
+// .shift {
+//   margin-top: 200px;
+// }
+
+.fixed {
+  position: fixed;
+  top: 0px;
+  left: 0px;
 }

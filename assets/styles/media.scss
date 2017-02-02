@@ -1,16 +1,19 @@
 @media screen and (max-width: 992px) {
   body {
-    font-size: 12px;
+    font-size: 11px;
   }
   .nav-logo-image {
     width: 350px;
   }
   .hero-content {
-    padding: 175px;
+    padding: 170px 10px;
   }
 
   .hero-content h1 {
     width: 100%;
+  }
+  .content-wrapper {
+    padding-top: 50px;
   }
   .content-issue-container {
     margin: 100px 0px;
@@ -24,9 +27,20 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .page-nav-list>a {
+    width: 19%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .page-nav-list>a {
+    width: 19.5%;
+  }
+}
 @media screen and (max-width: 767px) {
   body {
-    font-size: 10px;
+    font-size: 9px;
   }
   .nav-logo-image {
     width: 300px;
@@ -34,8 +48,14 @@
   .hero-content {
     padding: 100px;
   }
+  #scroll-nav {
+    display: none;
+  }
+  .content-wrapper {
+    padding-top: 0px;
+  }
   .content-issue-container {
-    margin: 75px 0px;
+    margin: 10px 0px 75px 0px;
   }
   .issue-content h3 {
     padding: 15px 0;
@@ -47,29 +67,31 @@
   footer {
     padding: 30px 0px;
   }
-
   .footer-col-right,
   .footer-col-left {
     width: 100%;
     padding: 10px 0px;
   }
+  .shift {
+    margin-top: 400px;
+  }
 }
 
 @media screen and (max-width: 500px) {
   body {
-    font-size: 9px;
+    font-size: 8px;
   }
   .hero-content h1 {
-    font-size: 3.5em;
+    font-size: 3.25em;
+  }
+  .content-issue-container {
+    margin: 0px 0 75px;
   }
   .nav-logo-image {
     width: 250px;
   }
   .hero-content {
-    padding: 75px;
-  }
-  .content-issue-container {
-    margin: 75px 0px;
+    padding: 75px 10px;
   }
   .issue-content h3 {
     padding: 12px 0;

@@ -48,8 +48,8 @@
 
 	$(document).ready(function () {
 	  var html = '';
-	  $.get("./issues-test.csv", function (data) {
-	    // $.get("https://docs.google.com/spreadsheets/d/1oR8e73bZpJQNbPCJUSFivWm7APX7mSknnKTQg7DLSgA/pub?output=csv", function(data) {
+	  // $.get("./issues-test.csv", function(data) {
+	  $.get("https://docs.google.com/spreadsheets/d/1oR8e73bZpJQNbPCJUSFivWm7APX7mSknnKTQg7DLSgA/pub?output=csv", function (data) {
 	    var issues = $.csv.toObjects(data);
 
 	    var renderTemplate = function renderTemplate(issues) {
@@ -57,7 +57,7 @@
 	      for (var i = 0; i < issues.length; i++) {
 	        if (issues[i].overline) {
 	          ret += '<div class="content-issue-container">';
-	          ret += '<h2>' + issues[i].overline + '</h2>';
+	          ret += '<h2 id="' + issues[i].href + '">' + issues[i].overline + '</h2>';
 	        } else if (issues[i].overline === '' && issues[i].source === '') {
 	          ret += '</div>';
 	        } else {
@@ -75,6 +75,38 @@
 	    };
 	    html += renderTemplate(issues);
 	    $('#content-template').html(html);
+	  });
+
+	  $(function () {
+	    $('a[href*="#"]:not([href="#"])').click(function () {
+	      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+	        var target = $(this.hash);
+	        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+	        if (target.length) {
+	          $('html, body').animate({
+	            scrollTop: target.offset().top - 100
+	          }, 1000);
+	          return false;
+	        }
+	      }
+	    });
+	  });
+
+	  var stickyTop = function stickyTop() {
+	    var stickyTop = $('#scroll-nav').offset().top;
+	    $(window).on('scroll', function () {
+	      if ($(window).scrollTop() >= stickyTop) {
+	        $('#scroll-nav').addClass('fixed');
+	      } else {
+	        $('#scroll-nav').removeClass('fixed');
+	      }
+	    });
+	  };
+	  // document ready run StickeyTop
+	  stickyTop();
+	  // On window resize, run StickeyTop
+	  $(window).resize(function () {
+	    stickyTop();
 	  });
 	});
 
