@@ -145,7 +145,7 @@
   border-top: 2px solid $red;
   padding-top: 10px;
   content: '';
-  transform: scaleX(0.0001);
+  transform: scaleX(0.000000001);
   transition: transform .25s ease-in-out;
 }
 
@@ -183,10 +183,6 @@ footer {
   padding: 50px 0px;
   text-align: center;
 }
-//
-// .shift {
-//   margin-top: 200px;
-// }
 
 .fixed {
   position: fixed;

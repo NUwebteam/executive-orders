@@ -86,6 +86,8 @@
   }
   .content-issue-container {
     margin: 0px 0 75px;
+    border-top: 1px solid #000;
+    padding-top: 20px;
   }
   .nav-logo-image {
     width: 250px;
@@ -103,10 +105,10 @@
 }
 
 @media screen and (max-width: 420px) {
-  .content-issue-container {
-    border-top: 1px solid #000;
-    padding-top: 20px;
-  }
+  // .content-issue-container {
+  //   border-top: 1px solid #000;
+  //   padding-top: 20px;
+  // }
   .content-issue-container h2 {
     text-decoration: none;
   }
