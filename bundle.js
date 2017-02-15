@@ -48,8 +48,8 @@
 
 	$(document).ready(function () {
 	  var html = '';
-	  // $.get("./issues-test.csv", function(data) {
-	  $.get("https://docs.google.com/spreadsheets/d/1oR8e73bZpJQNbPCJUSFivWm7APX7mSknnKTQg7DLSgA/pub?output=csv", function (data) {
+	  $.get("./issues-content.csv", function (data) {
+	    // $.get("https://docs.google.com/spreadsheets/d/1oR8e73bZpJQNbPCJUSFivWm7APX7mSknnKTQg7DLSgA/pub?output=csv", function(data) {
 	    var issues = $.csv.toObjects(data);
 
 	    var renderTemplate = function renderTemplate(issues) {
