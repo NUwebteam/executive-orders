@@ -65,9 +65,7 @@
 	          ret += '<a class="issue-content-link" href="' + issues[i].link + '" target="_blank">';
 	          ret += '<div class="issue-content">';
 	          ret += '<h3>' + issues[i].title + '</h3>';
-	          if (issues[i].date && issues[i].source) {
-	            ret += '<h5> <span class="issue-date">' + issues[i].date + '</span> -- ' + issues[i].source + ' </h5>';
-	          }
+	          ret += '<h5> <span class="issue-date">' + issues[i].date + '</span> -- ' + issues[i].source + ' </h5>';
 	          ret += '</div>';
 	          ret += '</a>';
 	          ret += '</div>';
