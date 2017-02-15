@@ -10,14 +10,16 @@ $(document).ready(function() {
         if (issues[i].overline) {
           ret += '<div class="content-issue-container">';
           ret += '<h2 id="'+issues[i].href+'">'+issues[i].overline+'</h2>';
-        } else if (issues[i].overline === '' && issues[i].source === '') {
+        } else if (issues[i].overline === '' && issues[i].link === '') {
           ret += '</div>';
         } else {
           ret += '<div class="issue-content-container">';
           ret += '<a class="issue-content-link" href="'+issues[i].link+'" target="_blank">';
           ret += '<div class="issue-content">';
           ret += '<h3>'+issues[i].title+'</h3>';
-          ret += '<h5> <span class="issue-date">'+issues[i].date+'</span> -- '+issues[i].source+' </h5>';
+          if (issues[i].date && issues[i].source) {
+            ret += '<h5> <span class="issue-date">'+issues[i].date+'</span> -- '+issues[i].source+' </h5>';
+          }
           ret += '</div>';
           ret += '</a>';
           ret += '</div>';
