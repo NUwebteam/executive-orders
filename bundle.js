@@ -69,6 +69,9 @@
 	          if (issues[i].source) {
 	            ret += '-- ' + issues[i].source + ' </h5>';
 	          }
+	          if (issues[i].blurb) {
+	            ret += '<h6 class="issue-blurb">' + issues[i].blurb + '</h6>';
+	          }
 	          ret += '</div>';
 	          ret += '</a>';
 	          ret += '</div>';
