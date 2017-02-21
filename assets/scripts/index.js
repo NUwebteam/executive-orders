@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var html = '';
-  $.get("./issues-content.csv", function(data) {
-  // $.get("https://docs.google.com/spreadsheets/d/1oR8e73bZpJQNbPCJUSFivWm7APX7mSknnKTQg7DLSgA/pub?output=csv", function(data) {
+  // $.get("./issues-content.csv", function(data) {
+  $.get("https://docs.google.com/spreadsheets/d/1oR8e73bZpJQNbPCJUSFivWm7APX7mSknnKTQg7DLSgA/pub?output=csv", function(data) {
     var issues = $.csv.toObjects(data);
 
     var renderTemplate = function(issues) {
@@ -60,12 +60,33 @@ $(document).ready(function() {
         }
     });
   };
+
+  var navResize = function() {
+    var navCount = $('.nav-item').length;
+    var navWidth = '';
+    if ($(window).width() > 1305) {
+      navWidth = ( (100 / navCount) - .2);
+      $('.page-nav-list > a').css('width', navWidth+'%');
+    } else if ($(window).width() <= 1305) {
+      navWidth = ( (100 / navCount) - .24 );
+      $('.page-nav-list > a').css('width', navWidth+'%');
+    } else if ($(window).width() <= 992) {
+      navWidth = ( (100 / navCount) - .3 );
+      $('.page-nav-list > a').css('width', navWidth+'%');
+    } else if ($(window).width() <= 800) {
+      navWidth = ( (100 / navCount) - .35 );
+      $('.page-nav-list > a').css('width', navWidth+'%');
+    }
+  }
   // document ready run StickeyTop
   stickyTop();
+  navResize();
   // On window resize, run StickeyTop
   $(window).resize(function() {
     stickyTop();
+    navResize();
   });
+
 });
 
 // module.exports = true;
